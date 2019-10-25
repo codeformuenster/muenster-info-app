@@ -30,11 +30,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const WelcomeCard = ({ onClose }) => {
+const WelcomeCard = () => {
   const classes = useStyles();
 
   return (
-    <BaseCard onClose={onClose}>
+    <BaseCard>
       <CardContent>
         <Typography variant="h6" className={classes.preTitle}>
           Willkommen auf der
@@ -70,6 +70,7 @@ const WelcomeCard = ({ onClose }) => {
           >
             Münsterhack 2019
           </Link>
+          .
         </Typography>
         <Box className={classes.aCode4MsProject}>
           Ein Projekt von{" "}
@@ -84,6 +85,16 @@ const WelcomeCard = ({ onClose }) => {
             />
           </Link>
         </Box>
+        <Typography variant="subtitle2">
+          <Link
+            href="https://github.com/codeformuenster/muenster-info-app/"
+            target="_blank"
+            rel="noopener"
+            className={classes.link}
+          >
+            Quellcode auf GitHub
+          </Link>
+        </Typography>
       </CardContent>
     </BaseCard>
   );

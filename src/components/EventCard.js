@@ -9,7 +9,7 @@ import LabelIcon from "@material-ui/icons/Label";
 import DirectionsIcon from "@material-ui/icons/Directions";
 import InfoIcon from "@material-ui/icons/Info";
 
-import Card from "@material-ui/core/Card";
+import BaseCard from './BaseCard';
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -28,9 +28,6 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
-  card: {
-    margin: theme.spacing(2),
-  },
   tag: {
     fontVariant: "small-caps"
   },
@@ -124,7 +121,7 @@ function EventCard({
   const classes = useStyles();
 
   return (
-    <Card className={classes.card} raised={true}>
+    <BaseCard>
       <CardActionArea>
         <Link href={link} target="_blank" rel="noopener">
           <CardMedia className={classes.media} image={image} title={title} />
@@ -137,7 +134,7 @@ function EventCard({
             >
               {title}
             </Typography>
-            <Typography variant="body1" color="textSecondary" component="p">
+            <Typography variant="body1" color="textSecondary" component="div">
               <List disablePadding={true}>
                 <ListItem dense={true} className={classes.listItem}>
                   <ListItemIcon className={classes.eventStats}>
@@ -189,7 +186,7 @@ function EventCard({
           <DirectionsIcon className={classes.directionsIcon} />
         </Button>
       </ExpansionPanel>
-    </Card>
+    </BaseCard>
   );
 }
 

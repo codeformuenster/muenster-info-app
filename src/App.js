@@ -1,7 +1,14 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import SearchBar from "./components/SearchBar";
 import Events from './components/Events';
+import Info from './components/Info';
+import Footer from './components/Footer';
 import { DataProvider } from "./DataContext";
 
 import logo from "./logo.png";
@@ -22,13 +29,23 @@ function App() {
   const classes = useStyles();
 
   return (
-    <div>
-      <DataProvider>
-        <img src={logo} alt="münster.jetzt logo" className={classes.logo} />
-        <SearchBar />
-        <Events />
-      </DataProvider>
-    </div>
+    <Router>
+      <div>
+        <DataProvider>
+          <img src={logo} alt="münster.jetzt logo" className={classes.logo} />
+          <Switch>
+            <Route exact path="/">
+              <SearchBar />
+              <Events />
+            </Route>
+            <Route path="/info">
+              <Info />
+            </Route>
+          </Switch>
+          <Footer />
+        </DataProvider>
+      </div>
+    </Router>
   );
 }
 

@@ -30,11 +30,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const WelcomeCard = () => {
+const WelcomeCard = ({ onHideClick }) => {
   const classes = useStyles();
 
   return (
-    <BaseCard>
+    <BaseCard className={classes.welcomeCard} onHideClick={onHideClick}>
       <CardContent>
         <Typography variant="h6" className={classes.preTitle}>
           Willkommen auf der

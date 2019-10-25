@@ -9,7 +9,7 @@ import LabelIcon from "@material-ui/icons/Label";
 import DirectionsIcon from "@material-ui/icons/Directions";
 import InfoIcon from "@material-ui/icons/Info";
 
-import Card from './BaseCard';
+import BaseCard from './BaseCard';
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -121,7 +121,7 @@ function EventCard({
   const classes = useStyles();
 
   return (
-    <Card>
+    <BaseCard>
       <CardActionArea>
         <Link href={link} target="_blank" rel="noopener">
           <CardMedia className={classes.media} image={image} title={title} />
@@ -186,7 +186,7 @@ function EventCard({
           <DirectionsIcon className={classes.directionsIcon} />
         </Button>
       </ExpansionPanel>
-    </Card>
+    </BaseCard>
   );
 }
 

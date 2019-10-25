@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import BaseCard from "./BaseCard";
 
 import Box from "@material-ui/core/Box";
@@ -99,5 +100,9 @@ const WelcomeCard = ({ onHideClick }) => {
     </BaseCard>
   );
 };
+
+WelcomeCard.propTypes = {
+  onHideClick: PropTypes.func
+}
 
 export default WelcomeCard;

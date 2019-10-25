@@ -17,7 +17,7 @@ const Events = () => {
   return (
     <Grid container className={classes.root}>
       {events.map((event, i) => (
-        <Grid item key={event.id} xs="12" sm="6" md="4" lg="3" xl="2">
+        <Grid item key={event.id} xs={12} sm={6} md={4} lg={3} xl={2}>
           <EventCard
             {...event}
             title={event.title}

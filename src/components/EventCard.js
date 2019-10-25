@@ -137,7 +137,7 @@ function EventCard({
             >
               {title}
             </Typography>
-            <Typography variant="body1" color="textSecondary" component="p">
+            <Typography variant="body1" color="textSecondary" component="div">
               <List disablePadding={true}>
                 <ListItem dense={true} className={classes.listItem}>
                   <ListItemIcon className={classes.eventStats}>

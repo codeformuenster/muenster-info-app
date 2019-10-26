@@ -4,6 +4,7 @@ import WelcomeCard from "./WelcomeCard";
 import DataContext from "../DataContext";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles} from "@material-ui/core/styles";
+import useWelcomeHidden from "../hooks/useWelcomeHidden";
 
 const useStyles = makeStyles({
   root: {
@@ -14,7 +15,7 @@ const useStyles = makeStyles({
 const Events = () => {
   const classes = useStyles();
   const { events } = React.useContext(DataContext);
-  const [welcomeHidden, setWelcomeHidden] = React.useState(false);
+  const [welcomeHidden, setWelcomeHidden] = useWelcomeHidden();
 
   return (
     <Grid container className={classes.root}>

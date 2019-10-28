@@ -22,11 +22,11 @@ function onlyShowEventsWithImages(events) {
   return R.filter(event => event.image !== null, events);
 }
 
-function useHttpsInImages(events) {
-  return events.map(event => {
-    event.image = event.image.replace(/^http:\/\//i, 'https://');
-    return event
-  })
+const useHttpsInImages = (events) => {
+  return events.map(event => ({
+    ...event,
+    image: event.image.replace(/^http:\/\//i, 'https://')
+  }));
 }
 
 function sanitizeCategories(events) {

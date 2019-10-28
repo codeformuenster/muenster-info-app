@@ -22,6 +22,13 @@ function onlyShowEventsWithImages(events) {
   return R.filter(event => event.image !== null, events);
 }
 
+function useHttpsInImages(events) {
+  return events.map(event => {
+    event.image = event.image.replace(/^http:\/\//i, 'https://');
+    return event
+  })
+}
+
 function sanitizeCategories(events) {
   return events.map(event => {
     if (event.category === "top") {
@@ -102,6 +109,7 @@ const DataProvider = ({ children }) => {
         sortByDate,
         removePastEvents,
         onlyShowEventsWithImages,
+        useHttpsInImages,
         sanitizeCategories,
         sanatizeSources
       )(events);

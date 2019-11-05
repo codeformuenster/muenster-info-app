@@ -2,9 +2,9 @@
 
 ## Project info
 
-Alles über Münster im Überblick. Hervorgegangen aus dem [MÜNSTERHACK 2019](https://www.muensterhack.de) ist das Münster Info Hub *münster.jetzt,* eine Plattform, um Daten unterschiedlichen Ursprungs an einem einzigen Ort zusammenzuführen. Offen für alle Entwickler und alle erdenkbaren Daten - Hauptsache Münster!
+Alles über Münster im Überblick. Hervorgegangen aus dem [MÜNSTERHACK 2019](https://www.muensterhack.de) ist das Münster Info Hub *münster.jetzt,* eine Plattform, um Daten unterschiedlicher Veranstaltungsportale an einem einzigen Ort zusammenzuführen. Gedacht als Jumpstart und offen für alle Entwickler, die sich nicht selbst mit der mühseligen Anbindung von Event-Portalen beschäftigen möchten.
 
-Als Teilprojekts ist die mobile-first Webanwendung *app.münster.jetzt* entstanden. Hier werden alle verfügbaren News-Dienste des Münster Info Hubs in einer einfach zu navigierenden App unter [https://app.münster.jetzt](https://app.münster.jetzt) bereitgestellt. Der Source Code zur App findest du in diesem Repository.
+Als Teilprojekts ist die mobile-first Showcase-Webanwendung *app.münster.jetzt* entstanden. Hier werden alle verfügbaren News-Dienste des Münster Info Hubs in einer einfach zu navigierenden App unter [https://app.münster.jetzt](https://app.münster.jetzt) bereitgestellt. Der Source Code zur App findest du in diesem Repository.
 
 ## Start developing
 

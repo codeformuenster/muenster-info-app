@@ -18,6 +18,10 @@ start app
 yarn start
 ```
 
+## Or use docker
+docker-compose up --build
+
+
 ## Used technologies
 
 - [React - A JavaScript library for building user interfaces](https://reactjs.org/)

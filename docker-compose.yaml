@@ -1,0 +1,14 @@
+version: "2.2"
+services:
+    muenster-info-app:
+        build: .
+        ports:
+            - "3000:3000"
+        volumes:
+            - node-modules:/app/node-modules
+            - ./public:/app/public
+            - ./src:/app/src
+
+volumes:
+    node-modules:
+        driver: local

@@ -20,24 +20,26 @@ yarn start
 
 ## Or use docker
 
-This description assumes that you are using our backend (see https://github.com/codeformuenster/muenster-info-hub), i.e. elasticsearch is running locally and `COMPOSE_PROJECT_NAME` is set to `msinfohub`.
-
-In order to use your locally running elasticsearch you will have to adjust the address of the proxy in the file package.json:
-
-```
-"proxy": "http://msinfohub_elasticsearch_1:9200"
-```
-
-and in src/DataContext.js:66
-```
-"/msinfohub-events/_search?size=2000",
-```
+This description assumes that you are using our backend (see https://github.com/codeformuenster/muenster-info-hub), i.e. elasticsearch is running locally in a container.
 
 Start the container:
 ```bash
 docker-compose up --build
 ```
 
+Connect the elasticsearch container to the network `muenster-info-app` defined in the docker-compose.yaml like this:
+
+```bash
+docker network connect --alias elasticsearch muenster-info-app <name-or-id-of-your-elasticsearch-container>
+```
+
+Replace `localhost` with `elasticsearch` in package.json and set `REACT_APP_ELASTICSEARCH_URL` to empty string in .env
+
+Restart this container
+
+```bash
+docker-compose up --force-recreate
+```
 
 ## Used technologies
 

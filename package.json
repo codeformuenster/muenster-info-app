@@ -36,5 +36,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://data.mein-ms.de/infohub"
+  "proxy": "http://localhost:9000/msinfohub-events"
 }

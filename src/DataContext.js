@@ -18,14 +18,12 @@ function removePastEvents(events) {
   return R.filter(n => n.time >= new Date(), events);
 }
 
-function onlyShowEventsWithImages(events) {
-  return R.filter(event => event.image !== null, events);
-}
-
 const useHttpsInImages = (events) => {
   return events.map(event => ({
     ...event,
-    image: event.image.replace(/^http:\/\//i, 'https://')
+    image: event.image
+      ? event.image.replace(/^http:\/\//i, "https://")
+      : undefined
   }));
 }
 
@@ -108,7 +106,6 @@ const DataProvider = ({ children }) => {
       const polishedEvents = R.pipe(
         sortByDate,
         removePastEvents,
-        onlyShowEventsWithImages,
         useHttpsInImages,
         sanitizeCategories,
         sanatizeSources

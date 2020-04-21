@@ -61,7 +61,7 @@ const DataProvider = ({ children }) => {
           hits: { hits }
         }
       } = await axios.post(
-        "https://api.muenster.jetzt/msinfohub-events/_search?size=2000",
+        `${process.env.REACT_APP_ELASTICSEARCH_URL}/_search?size=2000`,
         searchPhraseDebounced.trim() !== ""
           ? {
               query: {

@@ -8,7 +8,12 @@ services:
             - node-modules:/app/node-modules
             - ./public:/app/public
             - ./src:/app/src
+        networks:
+            - muenster-info-app
 
 volumes:
     node-modules:
         driver: local
+
+networks:
+    muenster-info-app:

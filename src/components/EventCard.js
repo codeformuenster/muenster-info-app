@@ -123,7 +123,7 @@ function EventCard({
   return (
     <BaseCard>
       <CardActionArea>
-        <Link href={link} target="_blank" rel="noopener">
+        <Link href={link}>
           <CardMedia className={classes.media} image={image} title={title} />
           <CardContent className={classes.cardContent}>
             <Typography
